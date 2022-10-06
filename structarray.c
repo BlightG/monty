@@ -5,8 +5,9 @@ int strctarray(stack_t **TOP, char *fileop, unsigned int line_count, int n)
 	int i;
 	instruction_t myfunctions[3] = {{"pall", pall},
 					{"pint", pint}};
-					
-
+	
+	if (strlen(fileop) == 0)
+		return (1);
 	if(strcmp(fileop, "push") == 0)
 	{
 		push(TOP, line_count, n);
