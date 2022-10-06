@@ -5,8 +5,7 @@ void pop(stack_t **TOP, unsigned int line_count)
 
 	if (*TOP == NULL)
 	{
-		fprintf(\
-		stderr, "L<%d>: can't pop an empty stack\n", line_count);
+	fprintf(stderr, "L<%d>: can't pop an empty stack\n", line_count);
 		freestack(*TOP);
 		exit(EXIT_FAILURE);
 	}
