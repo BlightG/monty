@@ -1,10 +1,10 @@
 #include "monty.h"
 /**
  * add - function that adds to top of stack
- * 
+ *
  * @TOP: pointer to top of stack
  * @line_count: count of lines printed
- */ 
+*/
 void add(stack_t **TOP, unsigned int line_count)
 {
 	stack_t *first, *second;

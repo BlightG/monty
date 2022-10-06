@@ -1,13 +1,13 @@
 #include "monty.h"
 /**
  * line2cmd - converts a line fromfile to
- * 	      a format more easily managlbe for later
- * 
+ *	a format more easily managlbe for later
+ *
  * @line: a line form file being read
  * @command: output array
- * 
- * Return: if sucess command if not NULL 
- * 
+ *
+ * Return: if sucess command if not NULL
+ *
 */
 char *line2cmd(char *line, char *command)
 {
@@ -16,8 +16,6 @@ char *line2cmd(char *line, char *command)
 	i = j = 0;
 
 
-	/*if (strlen(line) == 1)
-		return (NULL);*/
 	while (line[i] == ' ')
 		i++;
 	if (line[i] == '\0' || line[i] == '$')

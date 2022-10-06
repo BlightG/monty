@@ -1,13 +1,12 @@
 #include "monty.h"
 /**
  * main - Entry-point for monty interpreter
- *  
+ *
  * @argc: count of arguments passed to interpreter
  * @argv: location of file to be checked:
- * 
+ *
  * Return: Always return 0 if succesfull
 */
-FILE *file;
 int main(int argc, char *argv[])
 {
 	FILE *file;
@@ -28,7 +27,7 @@ int main(int argc, char *argv[])
 		fprintf(stderr, "Error: Can't open file <%s>\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
-	memset(command, 0, 40);	
+	memset(command, 0, 40);
 	memset(fileop, 0, 40);
 	while (fgets(line, sizeof(char) * 40, file))
 	{

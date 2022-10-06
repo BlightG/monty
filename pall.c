@@ -1,11 +1,11 @@
 #include "monty.h"
 /**
  * pall - function that prints all of stack value
- * 
+ *
  * @TOP: pointer to top of stack
  * @line_count: count of lines printed
- */ 
-void pall(stack_t **TOP, __attribute__ ((unused)) unsigned int line_number)
+ */
+void pall(stack_t **TOP, __attribute__ ((unused)) unsigned int line_count)
 {
 	stack_t *temp;
 
