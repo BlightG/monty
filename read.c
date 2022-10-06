@@ -28,7 +28,7 @@ int main (int argc, char *argv[])
 		/*printf("line_count: %d",line_count);*/
 		if (line2cmd(line, command) == NULL)
 			continue;
-		n = cmd2struct(command, fileop, line_count);
+		n = cmd2struct(TOP, command, fileop, line_count);
 		strctarray(&TOP, fileop, line_count, n);
 		memset(command, 0, 14);
 		memset(fileop, 0, 8);

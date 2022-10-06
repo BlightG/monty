@@ -7,6 +7,7 @@ void push(stack_t **TOP, unsigned int line_count, int n)
 	if (!new)
         {
                 fprintf(stderr, "Error: malloc failed %d\n", line_count);
+		freestack(*TOP);
 		exit (EXIT_FAILURE);
         }
 	new->n = n;

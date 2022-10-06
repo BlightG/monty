@@ -40,7 +40,7 @@ typedef struct instruction_s
 /*extern unsigned int line_count;*/
 
 char *line2cmd(char *, char *);
-int cmd2struct(char *, char *, unsigned int);
+int cmd2struct(stack_t *, char *, char *, unsigned int);
 void freestack(stack_t *);
 int strctarray(stack_t **, char *, unsigned int, int);
 void push(stack_t **, unsigned int, int);
@@ -48,5 +48,6 @@ void pall(stack_t **, unsigned int);
 void pint(stack_t **, unsigned int);
 void pop(stack_t **, unsigned int);
 void swap(stack_t **, unsigned int);
+void add(stack_t **, unsigned int);
 
 #endif /* MONTY_H */
