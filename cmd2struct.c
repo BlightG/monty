@@ -49,7 +49,7 @@ int cmd2struct(stack_t *TOP, char *command,
 {
 	int i, j, n;
 
-	i = j = 0;
+	n = i = j = 0;
 	if (command == NULL)
 		exit(0);
 	if (command[0] == '#')
