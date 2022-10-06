@@ -3,8 +3,9 @@
 int strctarray(stack_t **TOP, char *fileop, unsigned int line_count, int n)
 {
 	int i;
-	instruction_t myfunctions[3] = {{"pall", pall},
-					{"pint", pint}};
+	instruction_t myfunctions[5] = {{"pall", pall},
+					{"pint", pint},
+					{"pop", pop}};
 	
 	if (strlen(fileop) == 0)
 		return (1);
@@ -15,7 +16,7 @@ int strctarray(stack_t **TOP, char *fileop, unsigned int line_count, int n)
 	}
 	else if(strcmp(fileop, "nop") == 0)
 		return (0);
-	for (i = 0 ; i < 2 ; i++)
+	for (i = 0 ; i < 4 ; i++)
 	{ 
 		if (strcmp(fileop, myfunctions[i].opcode) == 0)
 		{

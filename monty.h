@@ -46,5 +46,6 @@ int strctarray(stack_t **, char *, unsigned int, int);
 void push(stack_t **, unsigned int, int);
 void pall(stack_t **, unsigned int);
 void pint(stack_t **, unsigned int);
+void pop(stack_t **, unsigned int);
 
 #endif /* MONTY_H */
