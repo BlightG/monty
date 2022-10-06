@@ -1,10 +1,25 @@
 #include "monty.h"
-
-int cmd2struct(char *command, char *fileop)
+int checkint (char *command, int i, unsigned int line_count);
+int checkint (char *command, int i, unsigned int line_count)
+{
+	int n;
+	char *endptr;
+        
+	i++;
+	n = (int) strtol(&command[i], &endptr, 10);
+	if (endptr[0] != 0 && endptr[0] != 10)
+	{
+		fprintf(stderr, "L<%d>: usage: push integer", line_count);
+                exit (EXIT_FAILURE);
+	}
+   
+        return (n);
+	
+}
+int cmd2struct(char *command, char *fileop, unsigned int line_count)
 {
 	int i, j, n;
-	char *opint;
-
+	
 	if (command == NULL)
 		exit(0);
 	i = j = 0;
@@ -13,16 +28,9 @@ int cmd2struct(char *command, char *fileop)
 		fileop[i] = command[i];
 		i++;
 	}
-	opint = malloc(sizeof(char) * (strlen(command) - i));
-	/*i++*;*/
-	while(command[i] != '\0')
-	{
-		opint[j] = command[i];
-		i++;
-		j++;
-	}
-	n = atoi(opint);
-	printf(" fileop: '%s' n: '%d' \n", fileop, n);
-	free(opint);
-	return (n);
+	if (strcmp(fileop, "push") == 0)
+		n = checkint(command, i, line_count);
+	return(n);
+		
+	
 }

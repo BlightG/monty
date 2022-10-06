@@ -2,20 +2,12 @@
 
 char *line2cmd(char *line, char *command)
 {
-	int i, j, cmd_count;
+	int i, j;
 	
-	i = j = cmd_count = 0;
-	if (!line)
-	{
-		printf("NO line value");
+	i = j = 0;
+	
+	if (strlen(line) <= 2)
 		return (NULL);
-	}
-	if (strlen(line) == 2)
-	{
-		printf("empty line\n");
-		return (NULL);
-	}
-
 	while (line[i] == ' ')
 		i++;
 	if (line[i] == '\0' || line[i] == '$')

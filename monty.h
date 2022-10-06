@@ -2,8 +2,10 @@
 #define MONTY_H
 
 #include <stdlib.h>
+#define _POSIX_C_SOURCE 200809L
 #include <stdio.h>
 #include <string.h>
+#include <ctype.h>
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -38,11 +40,11 @@ typedef struct instruction_s
 /*extern unsigned int line_count;*/
 
 char *line2cmd(char *, char *);
-int cmd2struct(char *, char *);
+int cmd2struct(char *, char *, unsigned int);
 void freestack(stack_t *);
 int strctarray(stack_t **, char *, unsigned int, int);
-void pushint(stack_t **, unsigned int, int);
-void pallvoid(stack_t **, unsigned int);
+void push(stack_t **, unsigned int, int);
+void pall(stack_t **, unsigned int);
 void pint(stack_t **, unsigned int);
 
 #endif /* MONTY_H */
