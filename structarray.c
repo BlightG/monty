@@ -12,6 +12,8 @@ int strctarray(stack_t **TOP, char *fileop, unsigned int line_count, int n)
 		push(TOP, line_count, n);
 		return (0);
 	}
+	else if(strcmp(fileop, "nop") == 0)
+		return (0);
 	for (i = 0 ; i < 3 ; i++)
 	{ 
 		if (strcmp(fileop, myfunctions[i].opcode) == 0)
