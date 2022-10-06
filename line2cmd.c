@@ -16,8 +16,8 @@ char *line2cmd(char *line, char *command)
 	i = j = 0;
 
 
-	if (strlen(line) == 1)
-		return (NULL);
+	/*if (strlen(line) == 1)
+		return (NULL);*/
 	while (line[i] == ' ')
 		i++;
 	if (line[i] == '\0' || line[i] == '$')
