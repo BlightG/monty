@@ -6,20 +6,24 @@
          */
 char *line2cmd(char *line, char *command)
 {
-        int i = 0;
+        int i;
+        char *temp;
+        i = 0;
         printf("line: '%s', strlenline: %d", line,(int) strlen(line));
         if (strlen(line) < 2  || line == NULL)
                 return (NULL);
         while(line[i] == ' ')
                 i++;
         if (line[i] != '\0' || line[i] != '\n' || line[i] != '$')
-                command = strtok(line, " ");
+                temp = strtok(line, " ");
         else 
                 return (NULL);
-        printf("command: %s  ", command);
+        printf("command: '%s'  ", temp);
+        /*while(line[i] == ' ')
+                i++;*/
         if (line[i] != '\0' || line[i] != '\n' || line[i] != '$')
-                strcat(strtok(NULL, " "),command);
-        printf("command: %s  ", command);
+                strcat(strtok(NULL, " "),temp);
+        printf("command: '%s'  ", temp);
         /*while (line[i] != '\0')
         {
                 while (line[i] != ' ')
@@ -34,5 +38,6 @@ char *line2cmd(char *line, char *command)
                 }
                 i++;
         }*/
+        command = temp;
         return (command);
 }

@@ -34,7 +34,6 @@ int cmd2struct(char *command, char *fileop, unsigned int line_count)
 		fileop[i] = command[i];
 		i++;
 	}
-	printf("fileop: '%s'\n", fileop);
 	if (strcmp(fileop, "push") == 0)
 		n = checkint(command, i, line_count);
 	return(n);
