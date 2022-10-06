@@ -1,5 +1,14 @@
 #include "monty.h"
-
+/**
+ * line2cmd - converts a line fromfile to
+ * 	      a format more easily managlbe for later
+ * 
+ * @line: a line form file being read
+ * @command: output array
+ * 
+ * Return: if sucess command if not NULL 
+ * 
+*/
 char *line2cmd(char *line, char *command)
 {
 	int i, j;

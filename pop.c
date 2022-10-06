@@ -1,4 +1,10 @@
 #include  "monty.h"
+/**
+ * pop - function that removes to top of stack
+ * 
+ * @TOP: pointer to top of stack
+ * @line_count: count of lines printed
+ */ 
 void pop(stack_t **TOP, unsigned int line_count)
 {
 	stack_t *temp;

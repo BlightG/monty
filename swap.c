@@ -1,5 +1,10 @@
 #include "monty.h"
-
+/**
+ * swap - function that swap top of stack with second top
+ * 
+ * @TOP: pointer to top of stack
+ * @line_count: count of lines printed
+ */ 
 void swap(stack_t **TOP, unsigned int line_count)
 {
 	stack_t *oldtop, *newtop, *temp;

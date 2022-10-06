@@ -1,5 +1,15 @@
 #include "monty.h"
-
+/**
+ * strucutarray -  convnverts and sends opcode to 
+ * 		   appropirate finctio
+ * @TOP: top of stack pointer
+ * @fileop: organized order from interpreter
+ * @line_count: count of the current line
+ * @n: value at a node
+ * 
+ * Return: always return 0 if sucess
+ * 
+*/
 int strctarray(stack_t **TOP, char *fileop, unsigned int line_count, int n)
 {
 	int i;

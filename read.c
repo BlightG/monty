@@ -1,5 +1,12 @@
 #include "monty.h"
-
+/**
+ * main - Entry-point for monty interpreter
+ *  
+ * @argc: count of arguments passed to interpreter
+ * @argv: location of file to be checked:
+ * 
+ * Return: Always return 0 if succesfull
+*/
 int main(int argc, char *argv[])
 {
 	FILE *file;
@@ -25,7 +32,6 @@ int main(int argc, char *argv[])
 	while (fgets(line, sizeof(line), file))
 	{
 		line_count++;
-		/*printf("line_count: %d",line_count);*/
 		if (line2cmd(line, command) == NULL)
 			continue;
 		n = cmd2struct(TOP, command, fileop, line_count);
