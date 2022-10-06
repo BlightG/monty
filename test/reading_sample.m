@@ -1,5 +1,6 @@
 push 1$
-push 2$
+push 2 $
 push 3$
-pint
+pint$
+
 pall$

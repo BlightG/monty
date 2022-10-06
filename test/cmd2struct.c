@@ -1,29 +1,24 @@
 #include "monty.h"
-int checkint (char *command, int i);
-int checkint (char *command, int i)
+int checkint (char *command, int i, unsigned int line_count);
+int checkint (char *command, int i, unsigned int line_count)
 {
 	int n;
-        char *opint;
-
-	/*if(command[i])
-        {*/
-        opint = malloc(sizeof(char) * (strlen(command) - i));
-        while (isdigit(command[i]) || command[i] == '-')
-                i++;
-        printf("i %d streln command: %d",i, (int) strlen(command));
-        if (i != (int) strlen(command) && command[i] != ' ')
-        {
-		printf("invalid number %s", command);
+	char *endptr;
+        
+	i++;
+	n = (int) strtol(&command[i], &endptr, 10);
+	if (endptr[0] != 0 && endptr[0] != 10)
+	{
+		fprintf(stderr, "L<%d>: usage: push integer", line_count);
                 exit (EXIT_FAILURE);
-        }
-        n = (int) strtol(command, NULL, 10);
-        free(opint);
+	}
+   
         return (n);
 	
 }
-int cmd2struct(char *command, char *fileop)
+int cmd2struct(char *command, char *fileop, unsigned int line_count)
 {
-	int i, j;
+	int i, j, n;
 	
 	if (command == NULL)
 		exit(0);
@@ -33,11 +28,9 @@ int cmd2struct(char *command, char *fileop)
 		fileop[i] = command[i];
 		i++;
 	}
-	/*opint = malloc(sizeof(char) * (strlen(command) - i));*/
 	if (strcmp(fileop, "push") == 0)
-		return (checkint(command, i));
-	else
-		printf("exit failure");
-	return (0);	
+		n = checkint(command, i, line_count);
+	return(n);
+		
 	
 }

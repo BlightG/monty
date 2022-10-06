@@ -40,7 +40,7 @@ typedef struct instruction_s
 /*extern unsigned int line_count;*/
 
 char *line2cmd(char *, char *);
-int cmd2struct(char *, char *);
+int cmd2struct(char *, char *, unsigned int);
 void freestack(stack_t *);
 int strctarray(stack_t **, char *, unsigned int, int);
 void push(stack_t **, unsigned int, int);

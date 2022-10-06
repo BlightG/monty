@@ -5,16 +5,9 @@ char *line2cmd(char *line, char *command)
 	int i, j;
 	
 	i = j = 0;
-	/*if (!line)
-	{
-		printf("NO line value");
+	
+	if (strlen(line) <= 2)
 		return (NULL);
-	}
-	if (strlen(line) == 2)
-	{
-		printf("empty line\n");
-		return (NULL);
-	}*/
 	while (line[i] == ' ')
 		i++;
 	if (line[i] == '\0' || line[i] == '$')

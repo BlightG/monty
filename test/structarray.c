@@ -19,7 +19,7 @@ int strctarray(stack_t **TOP, char *fileop, unsigned int line_count, int n)
 			return (0);
 		}
 	}
-	fprintf(stderr, "L<%d>: unknown instruction <%s>", n, fileop);
+	fprintf(stderr, "L<%d>: unknown instruction <%s>", line_count, fileop);
 	exit (EXIT_FAILURE);
 	
 }
