@@ -26,9 +26,9 @@ int cmd2struct(char *command, char *fileop, unsigned int line_count)
 {
 	int i, j, n;
 	
+	i = j = 0;
 	if (command == NULL)
 		exit(0);
-	i = j = 0;
 	while (command[i] != ' ' && command[i] != '\0' && command[i] != '$')
 	{
 		fileop[i] = command[i];
