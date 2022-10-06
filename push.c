@@ -5,11 +5,11 @@ void push(stack_t **TOP, unsigned int line_count, int n)
 
 	new = malloc(sizeof(stack_t));
 	if (!new)
-        {
-                fprintf(stderr, "Error: malloc failed %d\n", line_count);
+	{
+		fprintf(stderr, "Error: malloc failed %d\n", line_count);
 		freestack(*TOP);
-		exit (EXIT_FAILURE);
-        }
+		exit(EXIT_FAILURE);
+}
 	new->n = n;
 	new->prev = NULL;
 	new->next = NULL;

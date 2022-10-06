@@ -3,10 +3,10 @@
 char *line2cmd(char *line, char *command)
 {
 	int i, j;
-	
+
 	i = j = 0;
 
-	
+
 	if (strlen(line) == 1)
 		return (NULL);
 	while (line[i] == ' ')
@@ -19,7 +19,7 @@ char *line2cmd(char *line, char *command)
 		i++;
 		j++;
 	}
-	while (line[i] == ' ')	
+	while (line[i] == ' ')
 		i++;
 	if (line[i] != '\0' || line[i] != '$')
 	{
