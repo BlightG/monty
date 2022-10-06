@@ -1,6 +1,6 @@
 #include "monty.h"
 
-int main (void)
+int main (int argc, char *argv[])
 {
 	FILE *file;
 	stack_t *TOP;
@@ -9,24 +9,25 @@ int main (void)
 	unsigned int line_count = 0;
 	
 	TOP = NULL;
-	file = fopen("reading_sample.m", "r");
+	if (argc != 2)
+	{
+		perror("USAGE: monty file");
+		exit (EXIT_FAILURE);
+	}		
+	file = fopen(argv[1], "r");
 	if (file == NULL)
 	{
-		perror("unable to open file: ");
-		return (EXIT_FAILURE);
+		fprintf(stderr, "Error: Can't open file <%s>", argv[1]);
+		exit (EXIT_FAILURE);
 	}
 	while(fgets(line, sizeof(line), file))
 	{
-		/*command = malloc(sizeof(char) * 15);*/
 		line_count++;
-		printf("%s", line);
 		memset(command, 0, 14);
 		memset(fileop, 0, 8);
 		line2cmd(line, command);
 		n = cmd2struct(command, fileop);
 		strctarray(&TOP, fileop, line_count, n);
-		n = 0;
-		/*free(command);*/
 	}
 	fclose(file);
 	freestack(TOP);

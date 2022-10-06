@@ -1,6 +1,6 @@
 #include "monty.h"
 
-void pallvoid(stack_t **TOP, unsigned int line_number)
+void pall(stack_t **TOP, unsigned int line_number)
 {
         stack_t *temp;
 	
