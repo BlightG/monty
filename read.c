@@ -7,6 +7,7 @@
  * 
  * Return: Always return 0 if succesfull
 */
+FILE *file;
 int main(int argc, char *argv[])
 {
 	FILE *file;

@@ -27,7 +27,6 @@ int strctarray(stack_t **TOP, char *fileop, unsigned int line_count, int n)
 		return (1);
 	if (strcmp(fileop, "push") == 0)
 	{
-		printf("fileop: '%s'", fileop);
 		push(TOP, line_count, n);
 		return (0);
 	}
