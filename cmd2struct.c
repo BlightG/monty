@@ -31,6 +31,8 @@ int cmd2struct(stack_t *TOP, char *command,
 	i = j = 0;
 	if (command == NULL)
 		exit(0);
+	if (command[0] = '#')
+		return (1);
 	while (command[i] != ' ' && command[i] != '\0' && command[i] != '$')
 	{
 		fileop[i] = command[i];
