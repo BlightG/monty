@@ -6,7 +6,13 @@ int checkint (char *command, int i, unsigned int line_count)
 	char *endptr;
         
 	i++;
-	n = (int) strtol(&command[i], &endptr, 10);
+	if (isdigit(command[i]))
+		n = (int) strtol(&command[i], &endptr, 10);
+	else
+	{
+		fprintf(stderr, "L<%d>: usage: push integer", line_count);
+                exit (EXIT_FAILURE);
+	}	
 	if (endptr[0] != 0 && endptr[0] != 10)
 	{
 		fprintf(stderr, "L<%d>: usage: push integer", line_count);
