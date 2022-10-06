@@ -4,7 +4,7 @@ int main (int argc, char *argv[])
 {
 	FILE *file;
 	stack_t *TOP;
-	char line[100], command[40], fileop[8];
+	char line[100], command[40], fileop[40];
 	int n;
 	unsigned int line_count = 0;
 	
@@ -20,8 +20,8 @@ int main (int argc, char *argv[])
 		fprintf(stderr, "Error: Can't open file <%s>\n", argv[1]);
 		exit (EXIT_FAILURE);
 	}
-	memset(command, 0, 14);
-	memset(fileop, 0, 8);
+	memset(command, 0, 40);
+	memset(fileop, 0, 40);
 	while(fgets(line, sizeof(line), file))
 	{
 		line_count++;

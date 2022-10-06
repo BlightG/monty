@@ -34,5 +34,6 @@ char *line2cmd(char *line, char *command)
 		i++;
 		j++;
 	}
+	printf("command: '%s'", command);
 	return (command);
 }
