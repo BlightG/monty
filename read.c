@@ -20,15 +20,18 @@ int main (int argc, char *argv[])
 		fprintf(stderr, "Error: Can't open file <%s>", argv[1]);
 		exit (EXIT_FAILURE);
 	}
+	memset(command, 0, 14);
+	memset(fileop, 0, 8);
 	while(fgets(line, sizeof(line), file))
 	{
 		line_count++;
-		memset(command, 0, 14);
-		memset(fileop, 0, 8);
+		/*printf("line_count: %d",line_count);*/
 		if (line2cmd(line, command) == NULL)
 			continue;
 		n = cmd2struct(command, fileop, line_count);
 		strctarray(&TOP, fileop, line_count, n);
+		memset(command, 0, 14);
+		memset(fileop, 0, 8);
 	}
 	fclose(file);
 	freestack(TOP);
