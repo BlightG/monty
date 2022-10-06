@@ -6,7 +6,7 @@ void push(stack_t **TOP, unsigned int line_count, int n)
 	new = malloc(sizeof(stack_t));
 	if (!new)
         {
-                fprintf(stderr, "Error: malloc failed %d", line_count);
+                fprintf(stderr, "Error: malloc failed %d\n", line_count);
 		exit (EXIT_FAILURE);
         }
 	new->n = n;

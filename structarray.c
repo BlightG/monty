@@ -14,7 +14,7 @@ int strctarray(stack_t **TOP, char *fileop, unsigned int line_count, int n)
 	}
 	else if(strcmp(fileop, "nop") == 0)
 		return (0);
-	for (i = 0 ; i < 3 ; i++)
+	for (i = 0 ; i < 2 ; i++)
 	{ 
 		if (strcmp(fileop, myfunctions[i].opcode) == 0)
 		{
@@ -22,7 +22,7 @@ int strctarray(stack_t **TOP, char *fileop, unsigned int line_count, int n)
 			return (0);
 		}
 	}
-	fprintf(stderr, "L<%d>: unknown instruction <%s>", line_count, fileop);
+	fprintf(stderr, "L<%d>: unknown instruction <%s>\n", line_count, fileop);
 	exit (EXIT_FAILURE);
 	
 }
