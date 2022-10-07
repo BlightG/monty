@@ -11,7 +11,7 @@ void _div(stack_t **TOP, unsigned int line_count)
 
 	if (*TOP == NULL || (*TOP)->next == NULL)
 	{
-	fprintf(stderr, "L<%d>: can't div, stack too short\n", line_count);
+	fprintf(stderr, "L%d: can't div, stack too short\n", line_count);
 		freestack(*TOP);
 		exit(EXIT_FAILURE);
 	}
@@ -20,7 +20,7 @@ void _div(stack_t **TOP, unsigned int line_count)
 	second = (*TOP)->next;
 	if (first->n == 0)
         {
-        fprintf(stderr, "L<%d>: division by zero\n", line_count);
+        fprintf(stderr, "L%d: division by zero\n", line_count);
 		freestack(*TOP);
 		exit(EXIT_FAILURE);
         }

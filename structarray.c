@@ -40,7 +40,7 @@ int strctarray(stack_t **TOP, char *fileop, unsigned int line_count, int n)
 			return (0);
 		}
 	}
-	fprintf(stderr, "L<%d>: unknown instruction <%s>\n", line_count, fileop);
+	fprintf(stderr, "L%d: unknown instruction %s\n", line_count, fileop);
 	freestack(*TOP);
 	exit(EXIT_FAILURE);
 }

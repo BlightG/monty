@@ -21,13 +21,13 @@ int checkint (stack_t *TOP, char *command, int i, unsigned int line_count)
 		n = (int) strtol(&command[i], &endptr, 10);
 	else
 	{
-		fprintf(stderr, "L<%d>: usage: push integer\n", line_count);
+		fprintf(stderr, "L%d: usage: push integer\n", line_count);
 		freestack(TOP);
 		exit(EXIT_FAILURE);
 	}
 	if (endptr[0] != 0 && endptr[0] != 10)
 	{
-		fprintf(stderr, "L<%d>: usage: push integer\n", line_count);
+		fprintf(stderr, "L%d: usage: push integer\n", line_count);
 		freestack(TOP);
 		exit(EXIT_FAILURE);
 	}

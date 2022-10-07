@@ -11,7 +11,7 @@ void add(stack_t **TOP, unsigned int line_count)
 
 	if (*TOP == NULL || (*TOP)->next == NULL)
 	{
-	fprintf(stderr, "L<%d>: can't add, stack too short\n", line_count);
+	fprintf(stderr, "L%d: can't add, stack too short\n", line_count);
 		freestack(*TOP);
 		exit(EXIT_FAILURE);
 	}
