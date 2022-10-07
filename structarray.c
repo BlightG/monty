@@ -22,7 +22,8 @@ int strctarray(stack_t **TOP, char *fileop, unsigned int line_count, int n)
 					{"div", _div},
 					{"mul", mul},
 					{"mod", mod},
-					{"pchar", pchar}};
+					{"pchar", pchar},
+					{"pstr", pstr}};
 
 	if (strlen(fileop) <= 2)
 		return (1);
