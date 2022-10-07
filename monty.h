@@ -53,5 +53,6 @@ void sub(stack_t **, unsigned int);
 void _div(stack_t **, unsigned int);
 void mul(stack_t **, unsigned int);
 void mod(stack_t **, unsigned int);
+void pchar(stack_t **, unsigned int);
 
 #endif /* MONTY_H */
