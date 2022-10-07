@@ -12,8 +12,8 @@
 */
 int strctarray(stack_t **TOP, char *fileop, unsigned int line_count, int n)
 {
-	int i;
-	instruction_t myfunctions[10] = {{"pall", pall},
+	int i, struct_size;
+	instruction_t myfunctions[] = {{"pall", pall},
 					{"pint", pint},
 					{"pop", pop},
 					{"swap", swap},
@@ -23,8 +23,9 @@ int strctarray(stack_t **TOP, char *fileop, unsigned int line_count, int n)
 					{"mul", mul},
 					{"mod", mod}};
 
-	if (strlen(fileop) == 0)
+	if (strlen(fileop) <= 2)
 		return (1);
+	struct_size = sizeof(myfunctions) / sizeof(myfunctions[0]);
 	if (strcmp(fileop, "push") == 0)
 	{
 		push(TOP, line_count, n);
@@ -32,7 +33,7 @@ int strctarray(stack_t **TOP, char *fileop, unsigned int line_count, int n)
 	}
 	else if (strcmp(fileop, "nop") == 0)
 		return (0);
-	for (i = 0 ; i < 10 ; i++)
+	for (i = 0 ; i < struct_size ; i++)
 	{
 		if (strcmp(fileop, myfunctions[i].opcode) == 0)
 		{
