@@ -1,11 +1,11 @@
 #include "monty.h"
 /**
  * push - function that pushes node to top of stack
- * 
+ *
  * @TOP: pointer to top of stack
  * @line_count: count of lines printed
  * @n: value to be stored in node
- */ 
+ */
 void push(stack_t **TOP, unsigned int line_count, int n)
 {
 	stack_t *new;

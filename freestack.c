@@ -2,7 +2,7 @@
 /**
  * freestack - frees a doubly linked list
  *
- * @top: pointer to TOP of stack
+ * @TOP: pointer to TOP of stack
 */
 void freestack(stack_t *TOP)
 {

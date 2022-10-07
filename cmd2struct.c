@@ -1,16 +1,16 @@
 #include "monty.h"
 /**
- * checkint - a funciton to check if psuh recives 
- * 
+ * checkint - a funciton to check if psuh recives
+ *
  * @TOP: top of stack pointer
  * @command: string that is a modifeid value from interpreter line
  * @i: location counter on command string
- * @linecount: count of current line
- * 
+ * @line_count: count of current line
+ *
  * Return: returns 0 if sucess
- * 
+ *
 */
-int checkint (stack_t *, char *command, int i, unsigned int line_count);
+int checkint (stack_t *TOP, char *command, int i, unsigned int line_count);
 int checkint (stack_t *TOP, char *command, int i, unsigned int line_count)
 {
 	int n;
@@ -36,14 +36,14 @@ int checkint (stack_t *TOP, char *command, int i, unsigned int line_count)
 }
 /**
  * cmd2struct - converts command to final order string fileop
- * 
+ *
  * @TOP:pointer totop of string
  * @command:a modified verison of line string
  * @fileop:a final verion of the command
  * @line_count: count of the current line
- * 
+ *
  * Return: returns 0 if sucess
-*/ 
+*/
 int cmd2struct(stack_t *TOP, char *command,
 		char *fileop, unsigned int line_count)
 {
