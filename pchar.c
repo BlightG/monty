@@ -18,5 +18,7 @@ void pchar(stack_t **TOP, unsigned int line_count)
         else
         {
         fprintf(stderr,"L%d: can't pchar, value out of range", line_count);
+                freestack(*TOP);
+                exit(EXIT_FAILURE);
         }
 }
