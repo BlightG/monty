@@ -7,17 +7,17 @@
  */
 void pstr(stack_t **TOP, __attribute__ ((unused)) unsigned int line_count)
 {
-        stack_t *temp;
+	stack_t *temp;
 
-        temp = *TOP;
+	temp = *TOP;
 
-        while(temp != NULL)
-        {
-                if (isalpha(temp->n))
-                        printf("%c", temp->n);
-                else
-                        break;
-                temp = temp->next;
-        }
-        printf("\n");
+	while (temp != NULL)
+	{
+		if (isalpha(temp->n))
+			printf("%c", temp->n);
+		else
+			break;
+		temp = temp->next;
+	}
+	printf("\n");
 }
