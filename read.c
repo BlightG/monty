@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
 {
 	FILE *file;
 	stack_t *TOP;
-	char line[100], command[100] , fileop[40];
+	char line[100], command[100], fileop[40];
 	int n;
 	unsigned int line_count = 0;
 

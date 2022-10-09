@@ -2,8 +2,8 @@
 
 /**
  * rotl - Function that rotate the *TOP of the*TOP
- * *TOP:*TOP structure
- * @line_number: number of instruction
+ * @TOP: TOP structure
+ * @line_count: number of instruction
  */
 
 void rotl(stack_t **TOP, __attribute__ ((unused)) unsigned int line_count)
